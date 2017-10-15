@@ -3,6 +3,7 @@ import Vuetify from 'vuetify'
 import Router from 'vue-router'
 import Feed from '@/components/Feed'
 import People from '@/components/People'
+import LoginApp from '@/components/LoginApp'
 
 Vue.use(Router)
 Vue.use(Vuetify)
@@ -10,7 +11,7 @@ Vue.use(Vuetify)
 export default new Router({
   routes: [
     {
-      path: '/',
+      path: '/feed',
       name: 'Feed',
       component: Feed
     },
@@ -18,6 +19,11 @@ export default new Router({
       path: '/people',
       name: 'People',
       component: People
+    },
+    {
+      path: '/',
+      name: 'LoginApp',
+      component: LoginApp
     }
   ]
 })
