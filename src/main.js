@@ -6,8 +6,11 @@ import Vuetify from 'vuetify'
 import Login from './Login'
 import router from './router'
 import('../node_modules/vuetify/dist/vuetify.min.css')
+import axios from 'axios'
+import('./assets/css/custom.css')
 
 Vue.use(Vuetify)
+Vue.use(axios)
 
 Vue.config.productionTip = false
 
