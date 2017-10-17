@@ -50,7 +50,7 @@ export default {
     return {
       drawer: true,
       items: [
-        { title: 'Discover', icon: 'dashboard', subtitle: 'Things by expert', page: '/' },
+        { title: 'Discover', icon: 'dashboard', subtitle: 'Things by expert', page: '/feed' },
         { title: 'People', icon: 'business_center', subtitle: 'Find, meet, and get helped', page: '/people' }
       ],
       mini: false,
@@ -59,5 +59,3 @@ export default {
   }
 }
 </script>
-
-

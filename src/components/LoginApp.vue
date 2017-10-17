@@ -10,7 +10,6 @@
           v-model="username"
           :rules="usernameRules"
           counter
-          required
         ></v-text-field>
         <v-flex xs12>
           <v-text-field
@@ -18,20 +17,20 @@
             label="Password"
             hint="At least 8 characters"
             v-model="password"
+            :rules="passwordRules"
             min="8"
             :append-icon="e1 ? 'visibility' : 'visibility_off'"
             :append-icon-cb="() => (e1 = !e1)"
             :type="e1 ? 'password' : 'text'"
             counter
-            required
           ></v-text-field>
         </v-flex>
         <v-btn
           @click="submit"
           color="black" dark block
-          :disabled="!valid"
+          to="/app"
         >
-          submit
+          Login
         </v-btn>
         <!-- <v-btn
         @click="clear">clear</v-btn> -->
@@ -48,7 +47,7 @@
 
     <v-btn class="text-xs-center"
     @click="submit"
-    color="blue darken-4" dark large float
+    color="blue darken-4" dark
     block
     >
     Login to Facebook
@@ -58,14 +57,15 @@
     <hr />
     <br />
     <div class="text-xs-center">
-        <span>Don't have an account? <b>Sign up.</b></span>
+        <span>Don't have an account?</span>
+        <router-link to="/registerapp"><b style="color:black;">REGISTER</b></router-link>
     </div>
 
   </div>
 </template>
 
-
 <script>
+import axios from 'axios'
 export default {
   name: 'loginapp',
   data: () => ({
@@ -74,7 +74,7 @@ export default {
     usernameRules: [
       (v) => !!v || 'Username is required'
     ],
-    e1: false,
+    e1: true,
     password: '',
     passwordRules: [
       (v) => !!v || 'Password is required'
@@ -84,10 +84,10 @@ export default {
     submit () {
       if (this.$refs.form.validate()) {
         // Native form submission is not yet supported
-          //  axios.post('/api/submit', {
-          //   username: this.username,
-          //   password: this.password
-          // })
+        axios.post('/api/submit', {
+          username: this.username,
+          password: this.password
+        })
       }
     },
     clear () {
