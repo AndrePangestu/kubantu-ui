@@ -5,6 +5,7 @@ import App from '@/App'
 import Feed from '@/components/Feed'
 import People from '@/components/People'
 import LoginApp from '@/components/LoginApp'
+import ProfessionApp from '@/components/ProfessionApp'
 import RegisterApp from '@/components/RegisterApp'
 
 Vue.use(Router)
@@ -31,6 +32,11 @@ export default new Router({
       path: '/app',
       name: 'App',
       component: App
+    },
+    {
+      path: '/professionapp',
+      name: 'ProfessionApp',
+      component: ProfessionApp
     },
     {
       path: '/registerapp',

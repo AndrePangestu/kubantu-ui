@@ -67,14 +67,12 @@
           counter
         ></v-text-field>
       </v-flex>
-      <v-flex xs12>
       <v-btn
-        color="black" dark block
+        color="black black" dark block
         to="/"
       >
         REGISTER
       </v-btn>
-      </v-flex>
     </v-layout>
     </v-container>
   </v-form>
