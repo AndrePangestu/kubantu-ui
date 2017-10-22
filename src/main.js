@@ -6,6 +6,7 @@ import Vuetify from 'vuetify'
 import Login from './Login'
 import router from './router'
 import('../node_modules/vuetify/dist/vuetify.min.css')
+import('./assets/css/custom.css')
 
 Vue.use(Vuetify)
 
