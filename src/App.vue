@@ -2,7 +2,7 @@
   <div id="app">
     <template>
       <v-app id="example-2" toolbar>
-        <v-navigation-drawer persistent light :mini-variant.sync="mini" v-model="drawer">
+        <v-navigation-drawer persistent light :mini-variant.sync="mini" v-model="drawer" v-if="login == true" id="app-drawer">
           <v-toolbar flat class="transparent">
             <v-list class="pa-0">
               <v-list-tile avatar>
@@ -29,7 +29,7 @@
             </v-list-tile>
           </v-list>
         </v-navigation-drawer>
-        <v-toolbar fixed class="white" dark>
+        <v-toolbar fixed class="white" dark v-if="login == true">
           <v-toolbar-side-icon @click.stop="drawer = !drawer" class="black--text"></v-toolbar-side-icon>
           <v-toolbar-title class="black--text"><b>ku</b>bantu</v-toolbar-title>
         </v-toolbar>
@@ -44,6 +44,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'app',
   data () {
@@ -54,8 +55,11 @@ export default {
         { title: 'People', icon: 'business_center', subtitle: 'Find, meet, and get helped', page: '/people' }
       ],
       mini: false,
-      right: null
+      right: null,
+      login: true
     }
+  },
+  created: function () {
   }
 }
 </script>

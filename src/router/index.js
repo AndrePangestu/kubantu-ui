@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 import Router from 'vue-router'
-import App from '@/App'
 import Feed from '@/components/Feed'
 import People from '@/components/People'
 import LoginApp from '@/components/LoginApp'
@@ -27,11 +26,6 @@ export default new Router({
       path: '/',
       name: 'LoginApp',
       component: LoginApp
-    },
-    {
-      path: '/app',
-      name: 'App',
-      component: App
     },
     {
       path: '/professionapp',

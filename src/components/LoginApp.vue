@@ -28,7 +28,6 @@
         <v-btn
           @click="submit"
           color="black" dark block
-          to="/app"
         >
           Login
         </v-btn>
@@ -66,6 +65,8 @@
 
 <script>
 import axios from 'axios'
+import router from '../router'
+
 export default {
   name: 'loginapp',
   data: () => ({
@@ -88,11 +89,14 @@ export default {
           username: this.username,
           password: this.password
         })
+        router.push({path: '/feed'})
       }
     },
     clear () {
       this.$refs.form.reset()
     }
+  },
+  created: function () {
   }
 }
 </script>

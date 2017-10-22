@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import Vuetify from 'vuetify'
 // import App from './App'
-import Login from './Login'
+import App from './App'
 import router from './router'
 import('../node_modules/vuetify/dist/vuetify.min.css')
 import('./assets/css/custom.css')
@@ -12,10 +12,12 @@ Vue.use(Vuetify)
 
 Vue.config.productionTip = false
 
+Vue.prototype.$LoggedIn = true
+
 /* eslint-disable no-new */
 new Vue({
-  el: '#login',
+  el: '#app',
   router,
-  template: '<Login/>',
-  components: { Login }
+  template: '<App/>',
+  components: { App }
 })
