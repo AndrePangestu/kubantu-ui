@@ -58,7 +58,7 @@
     <br />
     <div class="text-xs-center">
         <span>Don't have an account?</span>
-        <router-link to="/registerapp"><b style="color:black;">REGISTER</b></router-link>
+        <router-link to="/professionapp"><b style="color:black;">REGISTER</b></router-link>
     </div>
 
   </div>
