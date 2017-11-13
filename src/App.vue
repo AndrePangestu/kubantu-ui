@@ -51,8 +51,10 @@ export default {
     return {
       drawer: true,
       items: [
-        { title: 'Discover', icon: 'dashboard', subtitle: 'Things by expert', page: '/feed' },
-        { title: 'People', icon: 'business_center', subtitle: 'Find, meet, and get helped', page: '/people' }
+        { title: 'Feed', icon: 'dashboard', subtitle: 'Things by expert', page: '/' },
+        { title: 'Expert', icon: 'business_center', subtitle: 'Find, meet, and get helped', page: '/expert' },
+        { title: 'History', icon: 'history', subtitle: 'Your activity', page: '/history' },
+        { title: 'Profile', icon: 'perm_identity', subtitle: 'Your detailed profile', page: '/profile' }
       ],
       mini: false,
       right: null,

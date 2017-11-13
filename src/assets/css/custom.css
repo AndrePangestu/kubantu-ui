@@ -10,3 +10,64 @@ fieldset.title {
 fieldset.title legend {
     padding: 5px 10px;
 }
+
+.feed-name{
+  font-size:16px;
+  font-weight: bold;
+}
+.feed-date{
+  font-size:14px;
+  font-weight: bold;
+  color: #424242;
+}
+.feed-title{
+  font-size: 24px;
+  font-weight: bold;
+}
+.feed-fillcontent{
+  text-align: justify;
+}
+
+/*======================= FOR RESPONSIVE LAYOUT ========================*/
+
+/* mobile S*/
+@media screen and (max-width: 320px) {
+  .margin-feedname{
+    margin-left: 51px;
+  }
+}
+
+/* mobile M*/
+@media (min-width: 321px) and (max-width: 375px) {
+  .margin-feedname{
+    margin-left: 47px;
+  }
+}
+
+/* mobile L*/
+@media (min-width: 376px) and (max-width: 425px) {
+  .margin-feedname{
+    margin-left: 42px;
+  }
+}
+
+/* mobile L1*/
+@media (min-width: 426px) and (max-width: 560px) {
+  .margin-feedname{
+    margin-left: 38px;
+  }
+}
+
+/* mobile L2*/
+@media (min-width: 561px) and (max-width: 640px) {
+  .margin-feedname{
+    margin-left: 28px;
+  }
+}
+
+/* mobile L3*/
+@media (min-width: 641px) and (max-width: 768px) {
+  .margin-feedname{
+    margin-left: 20px;
+  }
+}

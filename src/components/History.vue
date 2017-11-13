@@ -1,12 +1,12 @@
 <template>
-  <div class="people">
-    PEOPLE
+  <div class="history">
+    History
   </div>
 </template>
 
 <script>
 export default {
-  name: 'people',
+  name: 'history',
   data () {
     return {
       msg: 'Welcome to Your Vue.js PWA'
@@ -14,4 +14,3 @@ export default {
   }
 }
 </script>
-
